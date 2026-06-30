@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="吴苏圆 — 前端开发学习者 | Frontend Learner">
+  <title>吴苏圆 — 前端开发学习者</title>
+
+  <!-- Google Fonts: Archivo + Space Grotesk (UUPM 推荐) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== 导航栏 ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">吴苏圆</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" data-i18n-nav="about">关于</a>
+        <a href="#skills" data-i18n-nav="skills">技能</a>
+        <a href="#projects" data-i18n-nav="projects">项目</a>
+        <a href="#contact" data-i18n-nav="contact">联系</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-icon" id="langToggle" aria-label="Switch language" title="中/EN">
+          <span class="lang-zh">中</span><span class="lang-divider">/</span><span class="lang-en">EN</span>
+        </button>
+        <button class="btn-icon" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="icon-sun">☀</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+        <button class="btn-icon nav-menu-btn" id="menuBtn" aria-label="Open menu">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== 回到顶部 ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <main>
+    <!-- ===== ① Hero ===== -->
+    <section class="section hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-avatar-wrapper">
+          <div class="hero-avatar">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="45" r="24" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 100c0-22.1 17.9-40 40-40s40 17.9 40 40" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <h1 class="hero-name">
+          <span data-i18n="name">吴苏圆</span>
+        </h1>
+        <p class="hero-title" data-i18n="title">前端开发学习者</p>
+        <div class="hero-typing">
+          <span class="typing-text" id="typingText"></span>
+          <span class="typing-cursor">|</span>
+        </div>
+        <div class="hero-links">
+          <a href="https://github.com/Su" class="hero-link" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="mailto:3316525687@qq.com" class="hero-link" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ② 关于我 ===== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section-title" data-i18n="aboutTitle">关于我</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p data-i18n="aboutP1">你好！我是吴苏圆，一名前端开发学习者。目前正在学习 HTML、CSS、JavaScript 等前端基础技术，同时对 Python 和 Git 也有所了解。</p>
+            <p data-i18n="aboutP2">我相信每一行代码都是成长的脚印，成果见证努力。在编程的世界里，每一次调试、每一个 Bug 的修复、每一个新知识的掌握，都是向前迈出的一步。</p>
+          </div>
+          <div class="about-info">
+            <div class="info-card">
+              <div class="info-label" data-i18n="education">教育背景</div>
+              <div class="info-value">常州工学院</div>
+            </div>
+            <div class="info-card">
+              <div class="info-label" data-i18n="location">所在地</div>
+              <div class="info-value">中国</div>
+            </div>
+            <div class="info-card">
+              <div class="info-label" data-i18n="focus">学习方向</div>
+              <div class="info-value" data-i18n="focusValue">前端开发 / Web 技术</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ③ 技能 ===== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <h2 class="section-title" data-i18n="skillsTitle">技能</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="skill-name">Frontend</h3>
+            <div class="skill-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="8" cy="6" r="1" fill="currentColor"/><circle cx="8" cy="18" r="1" fill="currentColor"/></svg>
+            </div>
+            <h3 class="skill-name">Backend & Script</h3>
+            <div class="skill-tags">
+              <span class="tag">Python</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <h3 class="skill-name">Tools</h3>
+            <div class="skill-tags">
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ④ 项目 ===== -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2 class="section-title" data-i18n="projectsTitle">项目作品</h2>
+        <div class="project-filters" id="projectFilters">
+          <button class="filter-btn active" data-filter="all" data-i18n="filterAll">全部</button>
+          <button class="filter-btn" data-filter="html" data-i18n="filterHTML">HTML/CSS</button>
+          <button class="filter-btn" data-filter="js" data-i18n="filterJS">JavaScript</button>
+          <button class="filter-btn" data-filter="python" data-i18n="filterPython">Python</button>
+        </div>
+        <div class="projects-grid" id="projectsGrid">
+          <!-- 占位项目卡片 —— 后续可替换为真实项目 -->
+          <article class="project-card" data-category="html js">
+            <div class="project-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name" data-i18n="project1Name">敬请期待</h3>
+              <p class="project-desc" data-i18n="project1Desc">正在学习前端技术，第一个项目即将上线</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-category="html">
+            <div class="project-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name" data-i18n="project2Name">个人网站</h3>
+              <p class="project-desc" data-i18n="project2Desc">你正在浏览的这个网站，纯 HTML/CSS/JS 实现</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-category="python">
+            <div class="project-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name" data-i18n="project3Name">Python 练习</h3>
+              <p class="project-desc" data-i18n="project3Desc">Python 基础练习和小工具合集</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ⑤ 联系 ===== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section-title" data-i18n="contactTitle">联系方式</h2>
+        <p class="contact-intro" data-i18n="contactIntro">如果你对我的学习经历感兴趣，或者想一起交流技术，欢迎通过以下方式联系我。</p>
+        <div class="contact-grid">
+          <a href="https://github.com/Su" class="contact-card" target="_blank" rel="noopener">
+            <div class="contact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">@Su</span>
+          </a>
+          <a href="mailto:3316525687@qq.com" class="contact-card">
+            <div class="contact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            </div>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">3316525687@qq.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; 2026 吴苏圆 &mdash; <span data-i18n="footerTagline">成果见证努力</span></p>
+        <div class="footer-links">
+          <a href="https://github.com/Su" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:3316525687@qq.com" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
